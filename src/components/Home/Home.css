@@ -1,0 +1,13 @@
+
+.container-landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+}
+
+
+.img-game{
+    width: 860px
+}
