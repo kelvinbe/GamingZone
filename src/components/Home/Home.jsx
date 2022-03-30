@@ -3,7 +3,6 @@ import Grid from '@mui/material/Grid';
 import Console from '../../Assets/Console.svg'
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
-import { red, green, blue } from '@mui/material/colors';
 import Header from '../Header/Header';
 
 import './Home.css'
