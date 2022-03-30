@@ -7,6 +7,7 @@ import { red, green, blue } from '@mui/material/colors';
 import Header from '../Header/Header';
 
 import './Home.css'
+import { Typography } from '@mui/material';
 
 
 const Root = styled('img')(({ theme }) => ({
@@ -16,11 +17,11 @@ const Root = styled('img')(({ theme }) => ({
       
     },
     [theme.breakpoints.up('md')]: {
-        width: 860
+        width: 633
 
     },
     [theme.breakpoints.up('lg')]: {
-        width: 860
+        width: 633
 
     },
   }));
@@ -32,10 +33,14 @@ export default function Home() {
       <Box sx={{ flexGrow: 1,  backgroundColor: '#9c2a2a', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
           <Header /> 
     <Grid container className='container-landing'>
-
+    <Typography>
+    <h1> Get New and trending</h1>
+   <h4>Based on player counts and release date</h4> 
+    </Typography>
         <Grid item xs={12}>
             <Root src={Console} className='img-game' />
         </Grid>
+        
         </Grid>
       </Box>
 

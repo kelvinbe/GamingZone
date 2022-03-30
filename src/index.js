@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+  <Routes>
+    <Route  path="/" element={<App />} />
+    {/* <Route  path="aboutme" element={<AboutMe />} />
+    <Route  path="portfolio" element={<Portfolio />} /> */}
+
+
+  
+    </Routes>
+    </BrowserRouter>,
   document.getElementById('root')
 );
 
