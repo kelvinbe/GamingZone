@@ -24,12 +24,12 @@ export default function Header() {
 
     const headersData = [
         {
-          label: "Listings",
-          href: "/listings",
+          label: "Home",
+          href: "/",
         },
         {
-          label: "Mentors",
-          href: "/mentors",
+          label: "Games",
+          href: "/games",
         },
         {
           label: "My Account",

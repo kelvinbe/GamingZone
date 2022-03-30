@@ -33,7 +33,7 @@ export default function Home() {
       <Box sx={{ flexGrow: 1,  backgroundColor: '#9c2a2a', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
           <Header /> 
     <Grid container className='container-landing'>
-    <Typography>
+             <Typography>
     <h1> Get New and trending</h1>
    <h4>Based on player counts and release date</h4> 
     </Typography>

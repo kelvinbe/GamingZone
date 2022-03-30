@@ -8,12 +8,15 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+
+
+import Games from './components/Games/Games'
+
 ReactDOM.render(
   <BrowserRouter>
   <Routes>
     <Route  path="/" element={<App />} />
-    {/* <Route  path="aboutme" element={<AboutMe />} />
-    <Route  path="portfolio" element={<Portfolio />} /> */}
+    <Route  path="games" element={<Games />} />
 
 
   
