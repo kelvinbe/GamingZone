@@ -16,11 +16,11 @@ const Root = styled('img')(({ theme }) => ({
       
     },
     [theme.breakpoints.up('md')]: {
-        width: 633
+        width: 533
 
     },
     [theme.breakpoints.up('lg')]: {
-        width: 633
+        width: 533
 
     },
   }));

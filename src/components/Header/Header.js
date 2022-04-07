@@ -18,7 +18,6 @@ export default function Header() {
 
     })
 
-  
     const {mobileView, drawerOpen} = state
 
     const headersData = [
