@@ -1,0 +1,14 @@
+
+.container-show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-direction: column;
+
+}
+
+
+.img-game{
+    width: 633px
+}

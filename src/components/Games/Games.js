@@ -51,6 +51,9 @@ export default function Games() {
       <Header />
 
       <Grid container style={{ justifyContent: "center" }}>
+        <Grid item md={12}>
+          <h1 style={{textAlign: 'center'}}>Top Upcoming Games</h1>
+        </Grid>
         {filteredResults.map((game, key) => {
           return (
             <Grid item style={{ padding: 10 }}>
