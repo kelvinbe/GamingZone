@@ -147,7 +147,7 @@ export default function Header() {
         return (
 
             <Toolbar style={{display: 'flex', justifyContent: 'space-between'}}>
-                Hi From Desktop Header
+                Gaming Zone
                         {getMenuButtons()}
 
             </Toolbar>
