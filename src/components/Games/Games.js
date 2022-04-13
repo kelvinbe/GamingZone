@@ -25,16 +25,22 @@ export default function Games() {
   const baseURL =
     "https://api.rawg.io/api/games?key=973bd0fd235343c58eebaf81de68b6cd";
 
-  useEffect(async () => {
-    try {
-      setIsLoading(true)
-      const resp = await axios.get(baseURL);
-      setResults(resp.data);
-      setIsLoading(false)
-    } catch (err) {
-      setIsLoading(false)
-      console.error(err);
+
+    const FetchData = async () => {
+      try {
+        setIsLoading(true)
+        const resp = await axios.get(baseURL);
+        setResults(resp.data);
+        setIsLoading(false)
+      } catch (err) {
+        setIsLoading(false)
+        console.error(err);
+      }
     }
+
+  useEffect( () => {
+    FetchData()
+    
   }, []);
 
   if (!results) return null;
