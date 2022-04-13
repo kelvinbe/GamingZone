@@ -13,8 +13,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Header from "../Header/Header";
 import "../Games/Games.css";
-import Loader from "../Loader/Loader";
-
+import LoaderPage from "../Loader/LoaderPage";
 import axios from "axios";
 import { Grid } from "@mui/material";
 
@@ -59,7 +58,7 @@ export default function Games() {
         paddingRight: 20,
       }}
     >
-    { isLoading ? <Loader /> :  (
+    { isLoading ? <LoaderPage /> :  (
       <>
     <Header />
 

@@ -1,31 +1,29 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { styled } from "@mui/material/styles";
-import Ninja from "../../Assets/Cover.svg";
 import Loader from "./Loader";
+import Typewriter from 'typewriter-effect';
 
-const Soot = styled("img")(({ theme }) => ({
-  padding: theme.spacing(1),
-  [theme.breakpoints.down("md")]: {
- 
-  },
-  [theme.breakpoints.up("md")]: {
-  },
-  [theme.breakpoints.up("lg")]: {
- 
-  },
-}));
+
 
 const LoaderPage = () => {
   return (
-    <Grid container style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-      <Grid item style={{overflow: "hidden", overflowX: 'hidden', overflowY: 'hidden'}}>
-        <Soot src={Ninja}  />
-      </Grid>
+    <Grid container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#a20606'}}>
+    
 
       <Grid item className="loader-fit">
         <Loader />
-      </Grid>
+    
+<Typewriter
+  options={{
+    strings: ['Gaming Zone', 'Loading...'],
+    autoStart: true,
+    loop: true,
+    cursor: ''
+
+  }}
+/>
+  
+           </Grid>
     </Grid>
   );
 }
