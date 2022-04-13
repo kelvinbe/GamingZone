@@ -6,7 +6,6 @@ import End from '../Pages/End';
 
 
 
-
 export default function Home() {
   return (
       <>

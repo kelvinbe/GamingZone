@@ -12,26 +12,35 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Header from "../Header/Header";
-import '../Games/Games.css'
+import "../Games/Games.css";
+import Loader from "../Loader/Loader";
 
 import axios from "axios";
 import { Grid } from "@mui/material";
 
 export default function Games() {
   const [results, setResults] = useState(null);
+  const [isLoading, setIsLoading] = useState(false)
 
   const baseURL =
     "https://api.rawg.io/api/games?key=973bd0fd235343c58eebaf81de68b6cd";
 
-  useEffect(() => {
-    axios
-      .get(baseURL)
-      .then((response) => {
-        setResults(response.data);
-      })
-      .catch((err) => {
+
+    const FetchData = async () => {
+      try {
+        setIsLoading(true)
+        const resp = await axios.get(baseURL);
+        setResults(resp.data);
+        setIsLoading(false)
+      } catch (err) {
+        setIsLoading(false)
         console.error(err);
-      });
+      }
+    }
+
+  useEffect( () => {
+    FetchData()
+    
   }, []);
 
   if (!results) return null;
@@ -40,19 +49,23 @@ export default function Games() {
   console.log(results.results);
 
   return (
-    <div style={{
-      display: "flex",
-      justifyContent: 'center',
-      backgroundColor: '#9c2a2a',
-      padding: 80, 
-      flexGrow: 1
-
-    }}>
-      <Header />
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        backgroundColor: "#9c2a2a",
+        paddingTop: 80,
+        paddingLeft: 20,
+        paddingRight: 20,
+      }}
+    >
+    { isLoading ? <Loader /> :  (
+      <>
+    <Header />
 
       <Grid container style={{ justifyContent: "center" }}>
         <Grid item md={12}>
-          <h1 style={{textAlign: 'center'}}>Top Upcoming Games</h1>
+          <h1 style={{ textAlign: "center" }}>Top Upcoming Games</h1>
         </Grid>
         {filteredResults.map((game, key) => {
           return (
@@ -100,6 +113,8 @@ export default function Games() {
           );
         })}
       </Grid>
+      </>
+      )}
     </div>
   );
 }
