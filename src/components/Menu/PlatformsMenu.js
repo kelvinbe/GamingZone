@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {} from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -9,6 +9,11 @@ import ArchiveIcon from '@mui/icons-material/Archive';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { GetAllPS4Games, GetAllPS5Games, GetAllPCGames, GetAllXBOXGames } from '../Games/GamesApi';
+import {useDispatch} from 'react-redux'
+
+
+
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -53,13 +58,40 @@ const StyledMenu = styled((props) => (
 
 export default function PlatformsMenus() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const dispatch = useDispatch()
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  const getPS4Games = async () => {
+    const resp = await GetAllPS4Games()
+    dispatch({type: 'GET_PS4_GAMES', data: resp})
+    setAnchorEl(null);
+  };
+
+  const getPS5Games = async () => {
+    const resp =  await GetAllPS5Games()
+    dispatch({type: 'GET_PS5_GAMES', data: resp})
+    setAnchorEl(null)
+  }
+
+
+  const getAllXBOXGames = async () => {
+    const resp =  await GetAllXBOXGames()
+    dispatch({type: 'GET_XBOX_GAMES', data: resp})
+    setAnchorEl(null)
+  }
+  const getAllPCGames = async () => {
+    const resp =  await GetAllPCGames()
+    dispatch({type: 'GET_PC_GAMES', data: resp})
+    setAnchorEl(null)
+  }
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+
 
   return (
     <div style={{marginLeft: 52}}>
@@ -85,22 +117,22 @@ export default function PlatformsMenus() {
         open={open}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={getPS4Games} disableRipple>
           <EditIcon />
-          Edit
+          Playstation 4
         </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={getAllXBOXGames} disableRipple>
           <FileCopyIcon />
-          Duplicate
+          Xbox 360
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={getPS5Games} disableRipple>
           <ArchiveIcon />
-          Archive
+          Playstation 5
         </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem onClick={getAllPCGames} disableRipple>
           <MoreHorizIcon />
-          More
+          PC
         </MenuItem>
       </StyledMenu>
     </div>

@@ -19,7 +19,7 @@ import { Grid } from "@mui/material";
 import {useSelector, useDispatch} from 'react-redux'
 import OrderMenus from "../Menu/OrderMenu";
 import PlatformsMenus from "../Menu/PlatformsMenu";
-const baseURL= 'https://api.rawg.io/api/games?key=973bd0fd235343c58eebaf81de68b6cd'
+import { GetAllGames } from "./GamesApi";
 
 const Games = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -35,8 +35,9 @@ const Games = () => {
     const FetchData = async () => {
       try {
         setIsLoading(true)
-        const resp = await axios.get(baseURL);
-        dispatch({type: 'GET_RESULTS', data: resp.data})
+        const resp = await GetAllGames()
+        console.log('response', resp)
+        dispatch({type: 'GET_RESULTS', data: resp})
         setIsLoading(false)
       } catch (err) {
         setIsLoading(false)
@@ -48,9 +49,8 @@ const Games = () => {
   }, [dispatch]);
 
   if (!results) return null;
-  const filteredResults = results.results.filter((game) => game.id > 100);
 
-  console.log(results.results);
+  console.log(results);
 
   return (
     <div
@@ -69,16 +69,16 @@ const Games = () => {
 
       <Grid container style={{ justifyContent: "center" }}>
         <Grid item md={12}>
-          <h1 style={{ textAlign: "center" }}>Top Upcoming Games</h1>
+          <h1 style={{ textAlign: "center", color: 'white' }}>Top Upcoming Games</h1>
         </Grid>
         <Grid item md={12} style={{display: 'flex', justifyContent: 'center'}}>
           <OrderMenus />
           <PlatformsMenus />
 
         </Grid>
-        {filteredResults.map((game, key) => {
+        {results?.map((game, key) => {
           return (
-            <Grid item style={{ padding: 10 }}>
+            <Grid item style={{ padding: 10 }} key={game.id}>
               <Card sx={{ maxWidth: 345 }} key={game.id}>
                 <CardHeader
                   avatar={
