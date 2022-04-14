@@ -8,11 +8,14 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 
 import Games from './components/Games/Games'
 
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
   <Routes>
     <Route  path="/" element={<App />} />
@@ -21,7 +24,8 @@ ReactDOM.render(
 
   
     </Routes>
-    </BrowserRouter>,
+    </BrowserRouter>
+    </Provider>,
   document.getElementById('root')
 );
 
