@@ -20,3 +20,9 @@
 .css-wf16b5{
   background-color: rgb(249 60 60) !important;
 }
+
+.react-slideshow-container{
+  display: flex;
+  align-items: center;
+  width: 360px !important ;
+}

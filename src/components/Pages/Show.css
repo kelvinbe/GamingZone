@@ -4,11 +4,13 @@
     justify-content: center;
     align-items: center;
     padding: 40px 0;
-    flex-direction: column;
+    flex-direction: row;
 
 }
 
 
 .img-game{
-    width: 633px
+    padding-left: 40;
 }
+
+

@@ -10,13 +10,14 @@ import './Land.css'
 
 const Boot = styled('img')(({ theme }) => ({
     padding: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-        width: 360
+    [theme.breakpoints.down('sm')]: {
+        width: 259
       
     },
+ 
     [theme.breakpoints.up('md')]: {
-        width: 533
-
+        width: 360
+      
     },
     [theme.breakpoints.up('lg')]: {
         width: 533
@@ -35,8 +36,8 @@ export default function Land() {
     <h1> Get New and trending</h1>
    <h4>Based on player counts and release date</h4> 
     </Grid>
-        <Grid item xs={12}>
-            <Boot src={Console} className='img-game' />
+        <Grid item xs={12} >
+            <Boot src={Console}  />
         </Grid>
         
         </Grid>
