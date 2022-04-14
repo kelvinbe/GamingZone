@@ -1,31 +1,49 @@
 import React from 'react'
 import Grid from '@mui/material/Grid';
-import Spidy from '../../Assets/spidy.jpg'
-import Sink from '../../Assets/game.jpg'
+import Spidy from '../../Assets/eyes.jpg'
+import Sink from '../../Assets/infernal.png'
+import Face from '../../Assets/kratos.jpg'
+
 
 
 import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
 
 import './Show.css'
 import { Typography } from '@mui/material';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
 
 
-const Root = styled('img')(({ theme }) => ({
-    padding: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-        width: 360
-      
-    },
-    [theme.breakpoints.up('md')]: {
-        width: 333
 
-    },
-    [theme.breakpoints.up('lg')]: {
-        width: 420
 
-    },
-  }));
+const slideImages = [
+  {
+    url: Sink,
+  },
+  {
+    url: Spidy,
+  },
+  {
+    url: Face,
+  },
+
+];
+
+const Slideshow = () => {
+  return (
+    <div className="slide-container">
+      <Slide>
+       {slideImages.map((slideImage, index)=> (
+          <div className="each-slide" key={index}>
+            <div style={{'backgroundImage': `url(${slideImage.url})`, height: 480}}>
+              <span>{slideImage.caption}</span>
+            </div>
+          </div>
+        ))} 
+      </Slide>
+    </div>
+  )
+}
 
 
 
@@ -33,26 +51,18 @@ export default function Show() {
   return (
     <Box sx={{ flexGrow: 1,  backgroundColor: 'black', height: '100vh', justifyContent: 'center', alignItems: 'center'}}>
 <Grid container className='container-show'>
-       <Typography style={{color: 'white'}}>
+  <Grid item className="img-game">
+       <Typography style={{color: 'white'}} >
 <h1> Get New and trending</h1>
 <h4>Based on player counts and release date</h4> 
 </Typography>
-<Grid>
-  <Grid item xs={12} md={12}>
+</Grid>
+<Grid item >
+{Slideshow()}
+</Grid>
 
-      <Root src={Sink} className='img-game' />
+</Grid>
 
-
-  </Grid>
-  <Grid item xs={12} md={12}>
-
-      <Root src={Spidy} className='img-game' />
-
-
-  </Grid>
-  </Grid>
-  
-  </Grid>
 </Box>
   )
 }

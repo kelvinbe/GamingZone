@@ -11,13 +11,14 @@ import { Typography } from '@mui/material';
 
 const Root = styled('img')(({ theme }) => ({
     padding: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-        width: 360
+    [theme.breakpoints.down('sm')]: {
+        width: 259
       
     },
+ 
     [theme.breakpoints.up('md')]: {
-        width: 533
-
+        width: 360
+      
     },
     [theme.breakpoints.up('lg')]: {
         width: 533
