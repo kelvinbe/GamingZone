@@ -4,3 +4,21 @@
     size: "18px";
     marginLeft: 38px !important;
  }
+
+
+ .change {
+    animation: change 5s step-end infinite;
+  }
+  
+  @keyframes change {
+    0% {
+      color: red
+    }
+    25% {
+      color: rgb(250, 250, 250)
+    }
+    50% {
+      color: rgb(211, 37, 173)
+    }
+
+  }
