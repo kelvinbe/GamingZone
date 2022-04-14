@@ -28,6 +28,9 @@ const Games = () => {
   
 
 
+    
+
+  useEffect( () => {
     const FetchData = async () => {
       try {
         setIsLoading(true)
@@ -39,8 +42,6 @@ const Games = () => {
         console.error(err);
       }
     }
-
-  useEffect( () => {
     FetchData()
     
   }, []);
