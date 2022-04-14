@@ -26,3 +26,7 @@
   align-items: center;
   width: 360px !important ;
 }
+
+.react-slideshow-container .default-nav{
+  background: hsl(0deg 100% 50% / 60%) !important;
+}

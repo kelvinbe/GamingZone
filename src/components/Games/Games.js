@@ -16,20 +16,23 @@ import "../Games/Games.css";
 import LoaderPage from "../Loader/LoaderPage";
 import axios from "axios";
 import { Grid } from "@mui/material";
+import {useSelector, useDispatch} from 'react-redux'
 
-export default function Games() {
-  const [results, setResults] = useState(null);
+const baseURL= 'https://api.rawg.io/api/games?key=973bd0fd235343c58eebaf81de68b6cd'
+
+const Games = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const dispatch = useDispatch()
+  const results = useSelector((state) => state.results )
 
-  const baseURL =
-    "https://api.rawg.io/api/games?key=973bd0fd235343c58eebaf81de68b6cd";
+  
 
 
     const FetchData = async () => {
       try {
         setIsLoading(true)
         const resp = await axios.get(baseURL);
-        setResults(resp.data);
+        dispatch({type: 'GET_RESULTS', data: resp.data})
         setIsLoading(false)
       } catch (err) {
         setIsLoading(false)
@@ -117,3 +120,8 @@ export default function Games() {
     </div>
   );
 }
+
+
+
+
+export default Games
