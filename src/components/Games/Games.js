@@ -68,7 +68,7 @@ const Games = () => {
 
       <Grid container style={{ justifyContent: "center" }}>
         <Grid item md={12}>
-          <h1 style={{ textAlign: "center", color: 'white' }}>Top Upcoming Games</h1>
+          <h1 className="text-games">Top Upcoming Games</h1>
         </Grid>
         <Grid item md={12} style={{display: 'flex', justifyContent: 'center'}}>
           <OrderMenus />

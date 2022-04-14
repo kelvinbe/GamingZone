@@ -27,7 +27,7 @@ export default function End() {
     <Box
       sx={{
         flexGrow: 1,
-        backgroundColor: "#9c2a2a",
+        backgroundColor: "white",
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",
@@ -35,9 +35,9 @@ export default function End() {
     >
       <Header />
       <Grid container className="container-landing">
-        <Typography>
-          <h1> Get New and trending</h1>
-          <h4>Based on player counts and release date</h4>
+        <Typography className="text-end">
+          <h1>Rating on various platforms</h1>
+          <h4>What are the ratings on the various gaming platforms check out the graph below</h4>
         </Typography>
         <Grid item xs={12}>
           <Root src={Console} className="img-game" />

@@ -58,9 +58,14 @@ export default function Show() {
     >
       <Grid container className="container-show">
         <Grid item className="img-game">
-          <Typography style={{ color: "white" }}>
-            <h1> Get New and trending</h1>
-            <h4>Based on player counts and release date</h4>
+          <Typography className="text-show">
+            <h1>Next Generation Games</h1>
+            <h4>See what next Gen Games look like from incredible detailed graphics,
+              To the surreal power of the consoles imporving not only loading time,
+              but player experience overall.
+
+              
+               </h4>
           </Typography>
         </Grid>
         <Grid item>{Slideshow()}</Grid>

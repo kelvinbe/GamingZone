@@ -18,6 +18,10 @@
 
 .text-land{
     width: 433px;
+    font-family: 'Nunito', sans-serif;
+    /* font-family: 'Titillium Web', sans-serif; */
+    color: white;
+    font-weight: bold;
 }
 
 
