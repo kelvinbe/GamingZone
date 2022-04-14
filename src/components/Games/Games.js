@@ -44,7 +44,7 @@ const Games = () => {
     }
     FetchData()
     
-  }, []);
+  }, [dispatch]);
 
   if (!results) return null;
   const filteredResults = results.results.filter((game) => game.id > 100);
