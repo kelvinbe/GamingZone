@@ -121,7 +121,7 @@ const Header = () => {
         >
           <div>{getDrawerChoices()}</div>
         </Drawer>
-        <div>Gaming Zone</div>
+        <div className="change">Gaming Zone</div>
       </Toolbar>
     );
   };
