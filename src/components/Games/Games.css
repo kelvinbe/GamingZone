@@ -7,3 +7,13 @@
     height: 100vh;
 
 }
+
+
+.text-games{
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}

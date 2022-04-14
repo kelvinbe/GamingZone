@@ -10,3 +10,11 @@
 .img-game{
     width: 633px
 }
+
+
+.text-end{
+    font-family: 'Nunito', sans-serif !important;
+    /* font-family: 'Titillium Web', sans-serif; */
+    color: black;
+    font-weight: bold !important;
+}

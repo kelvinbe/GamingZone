@@ -35,11 +35,12 @@ export default function Land() {
       <Header />
       <Grid container className="container-land">
         <Grid item className="text-land">
-          <h1> Get New and trending Games</h1>
+          <h1> Get fast Information on New and trending Games</h1>
           <h4>
-            Netlify unites an entire ecosystem of modern tools and services into
-            a single, simple workflow for building high performance sites and
-            apps. Get started for free Questions? Talk to an expert
+            Find the latest games, see the latest technology,
+            Enjoy a wide range of information on your favourite gaming platforms,
+            See the rating of new and up coming games. See what the gaming market has to offer
+            all this and more at Gamezone
           </h4>
         </Grid>
         <Grid item>

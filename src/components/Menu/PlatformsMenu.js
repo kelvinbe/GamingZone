@@ -58,18 +58,22 @@ const StyledMenu = styled((props) => (
 
 export default function PlatformsMenus() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [selected, setSelected] = React.useState('Platform')
   const dispatch = useDispatch()
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const getPS4Games = async () => {
+    setSelected('Playstation 4')
     const resp = await GetAllPS4Games()
     dispatch({type: 'GET_PS4_GAMES', data: resp})
     setAnchorEl(null);
   };
 
   const getPS5Games = async () => {
+    setSelected('Playstation 5')
+
     const resp =  await GetAllPS5Games()
     dispatch({type: 'GET_PS5_GAMES', data: resp})
     setAnchorEl(null)
@@ -77,11 +81,15 @@ export default function PlatformsMenus() {
 
 
   const getAllXBOXGames = async () => {
+    setSelected('Xbox 360')
+
     const resp =  await GetAllXBOXGames()
     dispatch({type: 'GET_XBOX_GAMES', data: resp})
     setAnchorEl(null)
   }
   const getAllPCGames = async () => {
+    setSelected('PC')
+
     const resp =  await GetAllPCGames()
     dispatch({type: 'GET_PC_GAMES', data: resp})
     setAnchorEl(null)
@@ -106,7 +114,7 @@ export default function PlatformsMenus() {
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
       >
-        Platforms
+        {selected}
       </Button>
       <StyledMenu
         id="demo-customized-menu"
