@@ -1,5 +1,6 @@
 const initialState = {
   results: null,
+  chartsData: null
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -17,6 +18,8 @@ const rootReducer = (state = initialState, action) => {
 
     case "GET_PC_GAMES":
       return { results: action.data };
+    case "GET_CHARTS_DATA":
+      return { chartsData: action.data}
     default:
       return state;
   }

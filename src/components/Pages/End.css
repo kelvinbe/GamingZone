@@ -18,3 +18,9 @@
     color: black;
     font-weight: bold !important;
 }
+
+.graph{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px !important;
+}

@@ -65,14 +65,14 @@ export default function PlatformsMenus() {
     setAnchorEl(event.currentTarget);
   };
   const getPS4Games = async () => {
-    setSelected('Playstation 4')
+    setSelected('Playstation4')
     const resp = await GetAllPS4Games()
     dispatch({type: 'GET_PS4_GAMES', data: resp})
     setAnchorEl(null);
   };
 
   const getPS5Games = async () => {
-    setSelected('Playstation 5')
+    setSelected('Playstation5')
 
     const resp =  await GetAllPS5Games()
     dispatch({type: 'GET_PS5_GAMES', data: resp})
@@ -81,7 +81,7 @@ export default function PlatformsMenus() {
 
 
   const getAllXBOXGames = async () => {
-    setSelected('Xbox 360')
+    setSelected('Xbox360')
 
     const resp =  await GetAllXBOXGames()
     dispatch({type: 'GET_XBOX_GAMES', data: resp})
