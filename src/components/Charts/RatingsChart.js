@@ -47,7 +47,7 @@ export default function RatingsChart() {
   console.log("data", data);
 
   return (
-    <BarChart width={400} height={250} data={data}>
+    <BarChart width={350} height={250} data={data}>
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
