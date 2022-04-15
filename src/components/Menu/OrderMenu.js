@@ -87,20 +87,20 @@ export default function OrderMenus() {
       >
         <MenuItem onClick={handleClose} disableRipple>
           <EditIcon />
-          Edit
+          Release Date
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <FileCopyIcon />
-          Duplicate
+          Popularity
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
         <MenuItem onClick={handleClose} disableRipple>
           <ArchiveIcon />
-          Archive
+          Name
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <MoreHorizIcon />
-          More
+          Rating
         </MenuItem>
       </StyledMenu>
     </div>
