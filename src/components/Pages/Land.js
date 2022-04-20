@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import Console from "../../Assets/Console.svg";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Header from "../Header/Header";
+import BasicAlerts from "../Alert/Alert";
 
 import "./Land.css";
 
@@ -21,7 +22,20 @@ const Boot = styled("img")(({ theme }) => ({
   },
 }));
 
+
+
+
 export default function Land() {
+  const [alert, setAlert] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAlert(false)
+    }, 5000)
+
+  })
+  
+
   return (
     <Box
       sx={{
@@ -35,6 +49,8 @@ export default function Land() {
       <Header />
       <Grid container className="container-land">
         <Grid item className="text-land">
+        {alert && <BasicAlerts/>}
+
           <h1> Get fast Information on New and trending Games</h1>
           <h4>
             Find the latest games, see the latest technology,
