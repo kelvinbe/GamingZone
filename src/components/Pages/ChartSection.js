@@ -8,7 +8,7 @@ import { Typography } from "@mui/material";
 import RatingsChart from "../Charts/RatingsChart";
 
 
-export default function End() {
+export default function ChartSection() {
   return (
     <Box
       sx={{
