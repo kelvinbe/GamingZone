@@ -33,6 +33,7 @@ export default function Land() {
   const [alert, setAlert] = useState(true)
 
   useEffect(() => {
+    console.log('hey')
     setTimeout(() => {
       setAlert(false)
     }, 5000)
@@ -55,8 +56,8 @@ export default function Land() {
         <Grid item className="text-land">
         {alert && <BasicAlerts/>}
 
-          <h1 data-aos="fade-left"> Get fast Information on New and trending Games</h1>
-          <h4 data-aos="fade-right">
+          <h1 > Get fast Information on New and trending Games</h1>
+          <h4 >
             Find the latest games, see the latest technology,
             Enjoy a wide range of information on your favourite gaming platforms,
             See the rating of new and up coming games. See what the gaming market has to offer
