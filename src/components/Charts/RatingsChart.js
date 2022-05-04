@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend} from "recharts";
 
 import {
@@ -10,9 +10,10 @@ import {
 
 import { useDispatch, useSelector } from "react-redux";
 
-export default function RatingsChart() {
+export default function RatingsChart({chartIsVisible}) {
   const data = useSelector((state) => state.chartsData);
   const dispatch = useDispatch();
+
 
   
 
@@ -38,21 +39,26 @@ export default function RatingsChart() {
         return dispatch({type: 'GET_CHARTS_DATA',data: gameData})
       };
 
+      
+
       setGamesData()
    
 
     
   }, [dispatch]);
 
+  
+
+
   console.log("data", data);
 
   return (
-    <BarChart width={350} height={250} data={data}>
+    <BarChart width={350} height={250} data={chartIsVisible ? data : null}>
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="NoGames" fill="#8884d8" />
+      <Bar dataKey="NoGames" fill="#8884d8" animationDuration={4000} />
     </BarChart>
   );
 }

@@ -5,8 +5,12 @@ import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Header from "../Header/Header";
 import BasicAlerts from "../Alert/Alert";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 import "./Land.css";
+
+AOS.init()
 
 const Boot = styled("img")(({ theme }) => ({
   padding: theme.spacing(1),
@@ -51,8 +55,8 @@ export default function Land() {
         <Grid item className="text-land">
         {alert && <BasicAlerts/>}
 
-          <h1> Get fast Information on New and trending Games</h1>
-          <h4>
+          <h1 data-aos="fade-left"> Get fast Information on New and trending Games</h1>
+          <h4 data-aos="fade-right">
             Find the latest games, see the latest technology,
             Enjoy a wide range of information on your favourite gaming platforms,
             See the rating of new and up coming games. See what the gaming market has to offer

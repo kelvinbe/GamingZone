@@ -6,6 +6,10 @@ import Header from "../Header/Header";
 import "./CountUp.css";
 import { Typography } from "@mui/material";
 import CountUp from 'react-countup';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
+AOS.init()
 
 
 
@@ -13,7 +17,6 @@ export default function CountUpSection() {
 
     const myRef = useRef()
     const [countIsVisible, setCountIsVisible] = useState()
-    console.log('visibility', countIsVisible)
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -35,8 +38,8 @@ export default function CountUpSection() {
       <Header />
       <Grid container className="container-landing">
         <Typography className="text-end-count">
-          <h1>Top  Gaming Enigines Perfomance</h1>
-          <h4>The top 3 gaming enignes as rated by game developers</h4>
+          <h1 data-aos="fade-left">Top  Gaming Enigines Perfomance</h1>
+          <h4 data-aos="fade-right">The top 3 gaming enignes as rated by game developers</h4>
         </Typography>
         <Grid item xs={12} style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
         <Grid ref={myRef} item xs={12} className="count">
