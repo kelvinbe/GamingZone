@@ -23,12 +23,12 @@
     display: flex;
     justify-content: center;
     margin-top: 30px !important;
-    height: 141px;
+    height: 88px;
     width: 254px;
     background: rgb(255, 255, 255);
     text-align: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 59px;
     flex-direction: column !important;
     border-radius: 35px;
 }
