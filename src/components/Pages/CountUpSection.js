@@ -38,18 +38,18 @@ export default function CountUpSection() {
           <h1>Top  Gaming Enigines Perfomance</h1>
           <h4>The top 3 gaming enignes as rated by game developers</h4>
         </Typography>
-        <Grid>
+        <Grid item xs={12} style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
         <Grid ref={myRef} item xs={12} className="count">
-            <h4 style={{fontSize: '20px'}}>Unreal Engine</h4>
+            <p style={{fontSize: '20px'}}>Unreal Engine</p>
           <CountUp start={countIsVisible ? 0 : null} end={100} delay={3} suffix=" %"/>
         </Grid>
         <Grid item xs={12} className="count">
-        <h4 style={{fontSize: '20px'}}>Amazon Lumberyard</h4>
+        <p style={{fontSize: '20px'}}>Amazon Lumberyard</p>
 
           <CountUp start={countIsVisible ? 0 : null} end={80} delay={4} suffix=" %"/>
         </Grid>
         <Grid item xs={12} className="count">
-        <h4 style={{fontSize: '20px'}}>CryEngine</h4>
+        <p style={{fontSize: '20px'}}>CryEngine</p>
 
           <CountUp  start={countIsVisible ? 0 : null} end={50} delay={6} suffix=" %"/>
         </Grid>
