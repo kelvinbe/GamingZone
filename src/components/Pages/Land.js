@@ -33,6 +33,7 @@ export default function Land() {
   const [alert, setAlert] = useState(true)
 
   useEffect(() => {
+    console.log('hey')
     setTimeout(() => {
       setAlert(false)
     }, 5000)
