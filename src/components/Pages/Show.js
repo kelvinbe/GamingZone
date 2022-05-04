@@ -63,8 +63,8 @@ export default function Show() {
       <Grid container className="container-show">
         <Grid item className="img-game">
           <Typography className="text-show">
-            <h1 data-aos="fade-left">Next Generation Games</h1>
-            <h4 data-aos="fade-right">See what next Gen Games look like from incredible detailed graphics,
+            <h1 >Next Generation Games</h1>
+            <h4 >See what next Gen Games look like from incredible detailed graphics,
               To the surreal power of the consoles imporving not only loading time,
               but player experience overall.
 

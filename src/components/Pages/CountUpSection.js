@@ -38,8 +38,8 @@ export default function CountUpSection() {
       <Header />
       <Grid container className="container-landing">
         <Typography className="text-end-count">
-          <h1 data-aos="fade-left">Top  Gaming Enigines Perfomance</h1>
-          <h4 data-aos="fade-right">The top 3 gaming enignes as rated by game developers</h4>
+          <h1 >Top  Gaming Enigines Perfomance</h1>
+          <h4 >The top 3 gaming enignes as rated by game developers</h4>
         </Typography>
         <Grid item xs={12} style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
         <Grid ref={myRef} item xs={12} className="count">
