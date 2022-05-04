@@ -1,8 +1,9 @@
 import React from 'react'
 import Land from '../Pages/Land';
 import Show from '../Pages/Show';
-import End from '../Pages/End';
-
+import ChartSection from '../Pages/ChartSection';
+import CountUpSection from '../Pages/CountUpSection';
+import Footer from '../Footer/Footer';
 
 
 
@@ -11,7 +12,9 @@ export default function Home() {
       <>
       <Land />
       <Show />
-      <End />
+      <ChartSection />
+      <CountUpSection />
+      <Footer />
       </>
 
 
