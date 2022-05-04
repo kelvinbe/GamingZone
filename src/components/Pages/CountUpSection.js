@@ -5,7 +5,6 @@ import Header from "../Header/Header";
 
 import "./CountUp.css";
 import { Typography } from "@mui/material";
-import RatingsChart from "../Charts/RatingsChart";
 import CountUp from 'react-countup';
 
 
