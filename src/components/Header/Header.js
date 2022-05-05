@@ -134,8 +134,13 @@ const Header = () => {
   const displayDesktop = () => {
     return (
       <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
-        Gaming Zone
+         <div class='content-desk'>
+         <h4>Gaming Zone</h4>
+         <h4>Gaming Zone</h4>
+          </div>
+          <div>
         {getMenuButtons()}
+        </div>
       </Toolbar>
     );
   };

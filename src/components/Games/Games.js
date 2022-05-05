@@ -19,6 +19,8 @@ import {useSelector, useDispatch} from 'react-redux'
 import OrderMenus from "../Menu/OrderMenu";
 import PlatformsMenus from "../Menu/PlatformsMenu";
 import { GetAllGames } from "./GamesApi";
+import FooterContainer from "../Footer/footer";
+
 
 const Games = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -52,6 +54,7 @@ const Games = () => {
   console.log(results);
 
   return (
+    <div>
     <div
       style={{
         display: "flex",
@@ -123,6 +126,9 @@ const Games = () => {
       </Grid>
       </>
       )}
+
+    </div>
+    {!isLoading && <FooterContainer />}
     </div>
   );
 }

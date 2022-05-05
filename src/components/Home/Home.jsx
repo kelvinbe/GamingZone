@@ -3,7 +3,7 @@ import Land from '../Pages/Land';
 import Show from '../Pages/Show';
 import ChartSection from '../Pages/ChartSection';
 import CountUpSection from '../Pages/CountUpSection';
-import Footer from '../Footer/Footer';
+import FooterContainer from '../Footer/footer';
 
 
 
@@ -14,7 +14,7 @@ export default function Home() {
       <Show />
       <ChartSection />
       <CountUpSection />
-      <Footer />
+      <FooterContainer />
       </>
 
 
