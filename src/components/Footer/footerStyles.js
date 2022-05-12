@@ -34,6 +34,8 @@ export const Row = styled.div`
         grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
         
     }
+
+  
 `
 
 

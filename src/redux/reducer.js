@@ -1,6 +1,7 @@
 const initialState = {
   results: null,
-  chartsData: null
+  chartsData: null,
+  auth: null
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -15,11 +16,14 @@ const rootReducer = (state = initialState, action) => {
 
     case "GET_XBOX_GAMES":
       return { results: action.data };
-
     case "GET_PC_GAMES":
       return { results: action.data };
     case "GET_CHARTS_DATA":
       return { chartsData: action.data}
+    case "GET_USER_AUTH":
+        localStorage.setItem('profile', JSON.stringify({ ...action?.data.result}))
+        console.log('actionsss', action?.data)
+      return {auth: action.data}
     default:
       return state;
   }

@@ -13,6 +13,8 @@ import store from './redux/store';
 
 
 import Games from './components/Games/Games'
+import SignUp from './components/SignUp/SignUp';
+import Login from './components/Login/Login'
 
 ReactDOM.render(
   <Provider store={store}>
@@ -20,9 +22,9 @@ ReactDOM.render(
   <Routes>
     <Route  path="/" element={<App />} />
     <Route  path="games" element={<Games />} />
+    <Route  path="/signup" element={<SignUp />} />
+    <Route  path="/login" element={<Login />} />
 
-
-  
     </Routes>
     </BrowserRouter>
     </Provider>,
