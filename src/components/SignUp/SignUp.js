@@ -13,7 +13,7 @@ export default function SignUp() {
     <Grid container className='container'>
         <Grid item className="imageUp">
             <div className='itemUp'>
-                <img src={Upwave} />
+                <img src={Upwave} alt='up' />
             </div>
 
             <div className='textUp'>
@@ -28,7 +28,7 @@ export default function SignUp() {
 
         <Grid item className="imageDown">
             <div className='itemDown'>
-                <img src={DownWave} />
+                <img src={DownWave} alt='down' />
             </div>
         </Grid>
 

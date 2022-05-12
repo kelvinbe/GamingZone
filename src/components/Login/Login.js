@@ -12,7 +12,7 @@ export default function Login() {
     <Grid container className='containerLogin'>
         <Grid item className="imageUp">
             <div className='itemUp'>
-                <img src={Upwave} />
+                <img src={Upwave} alt='up' />
             </div>
 
             <div className='textUp'>
@@ -29,7 +29,7 @@ export default function Login() {
 
         <Grid item className="imageDown">
             <div className='itemDown'>
-                <img src={DownWave} />
+                <img src={DownWave} alt='down' />
             </div>
         </Grid>
 

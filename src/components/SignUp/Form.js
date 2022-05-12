@@ -21,7 +21,6 @@ export default function Form() {
 
   const submitAuth = async (e) => {
     e.preventDefault()  
-    const user = localStorage.getItem('profile')
 
     const data = await signUp(formValues)
     // console.log('data', data.result)
