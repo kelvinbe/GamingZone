@@ -8,7 +8,12 @@ import FooterContainer from '../Footer/footer';
 
 
 export default function Home() {
+
+  const user = localStorage.getItem('profile')
+  console.log(user)
   return (
+    
+    
       <>
       <Land />
       <Show />
@@ -16,6 +21,9 @@ export default function Home() {
       <CountUpSection />
       <FooterContainer />
       </>
+
+
+
 
 
   )

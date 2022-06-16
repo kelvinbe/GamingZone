@@ -4,12 +4,9 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import EditIcon from '@mui/icons-material/Edit';
-import Divider from '@mui/material/Divider';
-import ArchiveIcon from '@mui/icons-material/Archive';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import { OrderGamesByDate } from '../Games/GamesApi';
+import {useDispatch} from 'react-redux'
 const StyledMenu = styled((props) => (
   <Menu
     elevation={0}
@@ -53,11 +50,21 @@ const StyledMenu = styled((props) => (
 
 export default function OrderMenus() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [selected, setSelected] = React.useState('Order:')
+  const dispatch = useDispatch()
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleClose = async () => {
+    setSelected('Release Date')
+
+    
+    const resp = await OrderGamesByDate()
+    dispatch({type: 'GET_ORDER_BY_DATE', data: resp})
+    console.log('responseeee', resp)
+
     setAnchorEl(null);
   };
 
@@ -74,7 +81,7 @@ export default function OrderMenus() {
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
       >
-        Order:
+        {selected}
       </Button>
       <StyledMenu
         id="demo-customized-menu"
@@ -88,19 +95,6 @@ export default function OrderMenus() {
         <MenuItem onClick={handleClose} disableRipple>
           <EditIcon />
           Release Date
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <FileCopyIcon />
-          Popularity
-        </MenuItem>
-        <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
-          <ArchiveIcon />
-          Name
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <MoreHorizIcon />
-          Rating
         </MenuItem>
       </StyledMenu>
     </div>

@@ -29,10 +29,8 @@ const Games = () => {
 
   
 
-
-    
-
   useEffect( () => {
+
     const FetchData = async () => {
       try {
         setIsLoading(true)
