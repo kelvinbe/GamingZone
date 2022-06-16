@@ -4,7 +4,6 @@ import Show from '../Pages/Show';
 import ChartSection from '../Pages/ChartSection';
 import CountUpSection from '../Pages/CountUpSection';
 import FooterContainer from '../Footer/footer';
-import SignUp from '../SignUp/SignUp';
 
 
 
