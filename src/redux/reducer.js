@@ -24,6 +24,8 @@ const rootReducer = (state = initialState, action) => {
         localStorage.setItem('profile', JSON.stringify({ ...action?.data.result}))
         console.log('actionsss', action?.data)
       return {auth: action.data}
+    case "GET_ORDER_BY_DATE":
+      return { results: action.data };
     default:
       return state;
   }

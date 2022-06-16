@@ -56,3 +56,20 @@ export const GetAllPCGames = async () => {
 }
 
 
+
+export const OrderGamesByDate = async () => {
+
+    const resp = await axios.get(getAllGamesURL)
+    const Games = resp.data.results.filter((game) => game.id > 1000)
+    const sortedGames = Games.sort(function(a,b){
+        return new Date(b.released) - new Date(a.released)
+    })
+    return sortedGames
+
+
+
+
+
+}
+
+

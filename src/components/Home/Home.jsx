@@ -14,8 +14,7 @@ export default function Home() {
   console.log(user)
   return (
     
-      <>
-      { user ? 
+    
       <>
       <Land />
       <Show />
@@ -23,11 +22,9 @@ export default function Home() {
       <CountUpSection />
       <FooterContainer />
       </>
-      :
-      <SignUp />
-      
-}
-      </>
+
+
+
 
 
   )
