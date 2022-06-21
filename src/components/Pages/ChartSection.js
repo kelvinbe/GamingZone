@@ -42,7 +42,7 @@ export default function ChartSection() {
           <h1>Number of games on various platforms</h1>
           <h4 >Just how many are games are there on the various gaming platforms check out the graph below</h4>
         </Typography>
-        <Grid ref={myRef}  item xs={12} className="graph">
+        <Grid ref={myRef}  item xs={12} className="graphh">
           <RatingsChart chartIsVisible={chartIsVisible} />
         </Grid>
       </Grid>
