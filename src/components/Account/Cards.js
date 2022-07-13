@@ -11,14 +11,6 @@ import ImageAvatars from "./Avatar";
 import ComposedCharts from "./ComposedChart";
 
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
 
 const data = [
   { title: "Total Balance", number: 2005, games: "Global" },
@@ -41,7 +33,6 @@ const data2 = [
     { title: "Total Balance", number: 2001, games: "Global" },
   
   ];
-const card = <React.Fragment></React.Fragment>;
 
 console.log(data);
 
