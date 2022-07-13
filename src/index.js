@@ -15,6 +15,7 @@ import store from './redux/store';
 import Games from './components/Games/Games'
 import SignUp from './components/SignUp/SignUp';
 import Login from './components/Login/Login'
+import Account from './components/Account/Account';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -24,6 +25,8 @@ ReactDOM.render(
     <Route  path="games" element={<Games />} />
     <Route  path="/signup" element={<SignUp />} />
     <Route  path="/login" element={<Login />} />
+    <Route  path="/account" element={<Account />} />
+
 
     </Routes>
     </BrowserRouter>
