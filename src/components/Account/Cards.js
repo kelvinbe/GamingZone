@@ -5,7 +5,11 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Example from "./PieChart";
+import PieCharts from "./PieChart";
+import RadialChart from "./RadialChart";
+import ImageAvatars from "./Avatar";
+import ComposedCharts from "./ComposedChart";
+
 
 const bull = (
   <Box
@@ -18,18 +22,16 @@ const bull = (
 
 const data = [
   { title: "Total Balance", number: 2005, games: "Global" },
-  { title: "Total Balance", number: 2001, games: "Global" },
 
 ];
 
 const data2 = [
-    { title: "Total Balance", number: 2005, games: "Global" },
-    { title: "Total Balance", number: 2001, games: "Global" },
+    { title: "Total Balance", number: 2002, games: "Global" },
+    
   
   ];
   const data3 = [
     { title: "Total Balance", number: 2005, games: "Global" },
-    { title: "Total Balance", number: 2001, games: "Global" },
 
 
   
@@ -48,24 +50,16 @@ function OutlinedCard() {
     <Box sx={{ minWidth: 275 }}>
       {data.map((card) => {
         return (
-          <Card variant="outlined" key={card.number}>
+          <Card variant="outlined" key={card.number} style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
             <CardContent>
-             <Example />
-              <Typography variant="h5" component="div">
-                {card.number}
-              </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                {card.games}
-              </Typography>
-              <Typography variant="body2">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-              </Typography>
+             <PieCharts />
+            
             </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
+            
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+            <ImageAvatars/>
+            </div>
+
           </Card>
         );
       })}
@@ -81,6 +75,7 @@ function SecondCard() {
           return (
             <Card variant="outlined" key={card.number}>
               <CardContent>
+                <ComposedCharts />
                 <Typography
                   sx={{ fontSize: 14 }}
                   color="text.secondary"
@@ -94,15 +89,7 @@ function SecondCard() {
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                   {card.games}
                 </Typography>
-                <Typography variant="body2">
-                  well meaning and kindly.
-                  <br />
-                  {'"a benevolent smile"'}
-                </Typography>
               </CardContent>
-              <CardActions>
-                <Button size="small">Learn More</Button>
-              </CardActions>
             </Card>
           );
         })}
@@ -117,6 +104,8 @@ function ThirdCard() {
         return (
           <Card variant="outlined" key={card.number}>
             <CardContent>
+                <RadialChart />
+
               <Typography
                 sx={{ fontSize: 14 }}
                 color="text.secondary"
