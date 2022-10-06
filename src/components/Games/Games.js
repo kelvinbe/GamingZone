@@ -52,18 +52,21 @@ const Games = () => {
 
 }
 
-function increment() {
-  setIndex(index + 1);;
 
-  if (index === stop) {
-    setIndex(1)
-  }
-
-}
 
 
 useEffect(() => {
   let interval = null
+
+
+  function increment() {
+    setIndex(index + 1);;
+  
+    if (index === stop) {
+      setIndex(1)
+    }
+  
+  }
 
 
   if(isHover){
@@ -75,7 +78,7 @@ useEffect(() => {
 
   return () => clearInterval(interval)
 
-}, [isHover, increment])
+}, [isHover, index])
 
 
 
