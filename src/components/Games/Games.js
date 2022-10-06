@@ -18,24 +18,77 @@ import { Grid } from "@mui/material";
 import {useSelector, useDispatch} from 'react-redux'
 import OrderMenus from "../Menu/OrderMenu";
 import PlatformsMenus from "../Menu/PlatformsMenu";
-import { GetAllGames } from "./GamesApi";
+import { GetAllGames} from "./GamesApi";
 import FooterContainer from "../Footer/footer";
+
+
+
+
+
+
 
 
 const Games = () => {
   const [isLoading, setIsLoading] = useState(false)
+  const [isHover, setIsHover] = useState(false)
+  const [isGameId, setGameId] = useState(null)
+  const [index, setIndex] = useState(1)
+
   const dispatch = useDispatch()
   const results = useSelector((state) => state.results )
+  const stop = 7;
 
+
+  const handleHover = (id) => {
+    setIsHover(true)
+    setGameId(id)
+
+
+  }
+
+  const handleHoverOut = () => {
+
+    setIsHover(false)
+
+}
+
+
+
+
+useEffect(() => {
+  let interval = null
+
+
+  function increment() {
+    setIndex(index + 1);;
   
+    if (index === stop) {
+      setIndex(1)
+    }
+  
+  }
 
-  useEffect( () => {
 
+  if(isHover){
+   interval = setInterval(increment, 5000);
+  }else if(!isHover){
+    setIndex(1)
+    clearInterval(interval)
+  }
+
+  return () => clearInterval(interval)
+
+}, [isHover, index])
+
+
+
+  useEffect(() => {
+    
+    
     const FetchData = async () => {
       try {
         setIsLoading(true)
         const resp = await GetAllGames()
-        console.log('response', resp)
         dispatch({type: 'GET_RESULTS', data: resp})
         setIsLoading(false)
       } catch (err) {
@@ -43,13 +96,16 @@ const Games = () => {
         console.error(err);
       }
     }
-    FetchData()
-    
+    FetchData() 
+  
+
   }, [dispatch]);
 
   if (!results) return null;
 
   console.log(results);
+
+ 
 
   return (
     <div>
@@ -78,8 +134,8 @@ const Games = () => {
         </Grid>
         {results?.map((game, key) => {
           return (
-            <Grid item style={{ padding: 10 }} key={game.id}>
-              <Card sx={{ maxWidth: 345 }} key={game.id}>
+            <Grid item style={{ padding: 10 }} key={game.id} className="flex-wrapper">
+              <Card sx={{ maxWidth: 345 }} key={game.id} className="tag" onMouseOver={() => handleHover(game.id)} onMouseOut={handleHoverOut}>
                 <CardHeader
                   avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -94,12 +150,16 @@ const Games = () => {
                   title={game.name}
                   subheader={game.released}
                 />
-                <CardMedia
+               {isHover && game.id === isGameId ? <CardMedia
                   component="img"
                   height="194"
-                  image={game.background_image}
+                  image={game.short_screenshots[index].image}
                   alt="Paella dish"
-                />
+                /> : <CardMedia
+                component="img"
+                height="194"
+                image={game.background_image}
+                alt="Paella dish" />}
                 <CardContent>
                   <Typography variant="body2" color="text.secondary">
                     genre: {game.genres[0].name}
