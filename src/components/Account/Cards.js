@@ -41,7 +41,7 @@ function OutlinedCard() {
     <Box sx={{ minWidth: 275 }}>
       {data.map((card) => {
         return (
-          <Card variant="outlined" key={card.number} style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center'}}>
+          <Card variant="outlined" key={card.number} style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', overflowX: 'visible'}}>
             <CardContent>
              <PieCharts />
             
