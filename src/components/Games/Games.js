@@ -75,7 +75,7 @@ useEffect(() => {
 
   return () => clearInterval(interval)
 
-}, [isHover])
+}, [isHover, increment])
 
 
 
