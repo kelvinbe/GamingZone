@@ -26,9 +26,7 @@ ReactDOM.render(
     <Route  path="/signup" element={<SignUp />} />
     <Route  path="/login" element={<Login />} />
     <Route  path="/account" element={<Account />} />
-
-
-    </Routes>
+  </Routes>
     </BrowserRouter>
     </Provider>,
   document.getElementById('root')

@@ -68,9 +68,7 @@ export default function Show() {
             <h4 >See what next Gen Games look like from incredible detailed graphics,
               To the surreal power of the consoles imporving not only loading time,
               but player experience overall.
-
-              
-               </h4>
+              </h4>
           </Typography>
         </Grid>
         <Grid item>{Slideshow()}</Grid>

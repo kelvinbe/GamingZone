@@ -23,11 +23,6 @@ import FooterContainer from "../Footer/footer";
 
 
 
-
-
-
-
-
 const Games = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [isHover, setIsHover] = useState(false)
@@ -105,9 +100,7 @@ useEffect(() => {
 
   console.log(results);
 
- 
-
-  return (
+return (
     <div>
     <div
       style={{
@@ -150,7 +143,7 @@ useEffect(() => {
                   title={game.name}
                   subheader={game.released}
                 />
-               {isHover && game.id === isGameId ? <CardMedia
+          {isHover && game.id === isGameId ? <CardMedia
                   component="img"
                   height="194"
                   image={game.short_screenshots[index].image}

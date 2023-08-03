@@ -14,25 +14,18 @@ import ComposedCharts from "./ComposedChart";
 
 const data = [
   { title: "Total Balance", number: 2005, games: "Global" },
-
 ];
 
 const data2 = [
     { title: "Total Balance", number: 2002, games: "Global" },
-    
-  
-  ];
+];
   const data3 = [
     { title: "Total Balance", number: 2005, games: "Global" },
-
-
-  
-  ];
-  const data4 = [
+];
+const data4 = [
     { title: "Total Balance", number: 2005, games: "Global" },
     { title: "Total Balance", number: 2001, games: "Global" },
-  
-  ];
+];
 
 console.log(data);
 
@@ -43,7 +36,7 @@ function OutlinedCard() {
         return (
           <Card variant="outlined" key={card.number} style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', overflowX: 'visible'}}>
             <CardContent>
-             <PieCharts />
+          <PieCharts />
             
             </CardContent>
             

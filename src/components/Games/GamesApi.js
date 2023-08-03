@@ -7,8 +7,8 @@ const getAllGamesURL= 'https://api.rawg.io/api/games?key=973bd0fd235343c58eebaf8
 
 export const GetAllGames = async () => {
 
-   const resp = await axios.get(getAllGamesURL)
-      const filteredResults = resp.data.results.filter((game) => game.id > 100);
+    const resp = await axios.get(getAllGamesURL)
+    const filteredResults = resp.data.results.filter((game) => game.id > 100);
 
     return filteredResults
 }
@@ -65,11 +65,6 @@ export const OrderGamesByDate = async () => {
         return new Date(b.released) - new Date(a.released)
     })
     return sortedGames
-
-
-
-
-
 }
 
 
