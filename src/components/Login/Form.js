@@ -20,9 +20,7 @@ export default function Form() {
     
   }
 
-
-
-  const submitAuth = async (e) => {
+const submitAuth = async (e) => {
     e.preventDefault()  
     // const user = localStorage.getItem('profile')
 
@@ -52,7 +50,6 @@ export default function Form() {
           name='email'
           style={{margin: 30}}
           helperText="Enter your email address."
-
         />
         <TextField
           type='password'
@@ -62,9 +59,7 @@ export default function Form() {
           name='password'
           style={{margin: 30}}
           helperText="Enter your password."
-
-
-        />
+          />
       </div>
       <div style={{textAlign: 'center'}}>
       <Button type='submit' style={{backgroundColor: '#7A0BC0',width: 308}} variant="contained">Login</Button>

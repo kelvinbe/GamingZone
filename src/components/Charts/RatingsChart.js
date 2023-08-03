@@ -16,7 +16,6 @@ export default function RatingsChart({chartIsVisible}) {
 
 
   
-
   useEffect( () => {
     const setGamesData = async () => {
         const ps4Data = await GetPs4PlatformGames();
@@ -35,16 +34,12 @@ export default function RatingsChart({chartIsVisible}) {
           { name: 'psp', NoGames: countPC },
           { name: 'nintendo', NoGames: countNinte },
         ];
-       
         return dispatch({type: 'GET_CHARTS_DATA',data: gameData})
       };
 
       
 
       setGamesData()
-   
-
-    
   }, [dispatch]);
 
   

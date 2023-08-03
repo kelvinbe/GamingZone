@@ -10,10 +10,8 @@ const rootReducer = (state = initialState, action) => {
       return { results: action.data };
     case "GET_PS4_GAMES":
       return { results: action.data };
-
     case "GET_PS5_GAMES":
       return { results: action.data };
-
     case "GET_XBOX_GAMES":
       return { results: action.data };
     case "GET_PC_GAMES":

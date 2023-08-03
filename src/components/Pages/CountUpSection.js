@@ -29,7 +29,7 @@ export default function CountUpSection() {
     <Box
       sx={{
         flexGrow: 1,
-        backgroundColor: "blue",
+        backgroundColor: "maroon",
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",
