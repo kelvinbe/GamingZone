@@ -30,10 +30,6 @@ const Header = () => {
       label: "My Account",
       href: "/account",
     },
-    {
-      label: "Log Out",
-      href: "/logout",
-    },
   ];
 
   useEffect(() => {

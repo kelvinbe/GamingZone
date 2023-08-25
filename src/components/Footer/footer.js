@@ -17,7 +17,7 @@ export default function FooterContainer() {
                 <Footer.Title>Services</Footer.Title>
                 <Footer.Link href='#'>Marketing</Footer.Link>
                 <Footer.Link href='#'>Consulting</Footer.Link>
-                <Footer.Link href='#'>Developemnt</Footer.Link>
+                <Footer.Link href='#'>Development</Footer.Link>
             </Footer.Column>
             <Footer.Column>
                 <Footer.Title>Contact Us</Footer.Title>

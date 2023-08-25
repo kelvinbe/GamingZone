@@ -57,7 +57,7 @@ export default function Land() {
           </h4>
         </Grid>
         <Grid item>
-          <Boot src={Console} />
+       <Boot src={Console} />
         </Grid>
       </Grid>
     </Box>
