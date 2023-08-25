@@ -16,8 +16,6 @@ export const GetPs4PlatformGames = async () => {
     const ps4GameCount = ps4GamePlatform.find(game => game.games_count)
 
     return ps4GameCount
-
-
 }
 
 export const GetXbox1PlatformGames = async () => {
@@ -42,8 +40,6 @@ export const pcPlatformGames = async () => {
     const PCGameCount = PCGamePlatform.find(game => game.games_count)
 
     return PCGameCount
-
-
 }
 
 export const NintendoPlatformGames = async () => {
@@ -55,8 +51,6 @@ export const NintendoPlatformGames = async () => {
     const NintendoGameCount = NintendoGamePlatform.find(game => game.games_count)
 
     return NintendoGameCount
-
-
 }
 
 

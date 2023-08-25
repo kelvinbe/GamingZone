@@ -8,8 +8,7 @@ import './SignUp.css'
 
 export default function SignUp() {
 
-   
-  return (
+return (
     <Grid container className='container'>
         <Grid item className="imageUp">
             <div className='itemUp'>
@@ -24,15 +23,11 @@ export default function SignUp() {
         <Grid item className='formUp'>
             <Form />
         </Grid>
-
-
-        <Grid item className="imageDown">
+<Grid item className="imageDown">
             <div className='itemDown'>
                 <img src={DownWave} alt='down' />
             </div>
         </Grid>
-
-
-        </Grid>
-  )
+</Grid>
+        )
 }
