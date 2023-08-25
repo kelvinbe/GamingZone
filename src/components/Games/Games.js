@@ -83,9 +83,6 @@ const Games = () => {
     };
   }, [dispatch]);
 
-  if (!results) return null;
-
-  console.log(results);
 
   return (
     <div style={{ height: "100vh", backgroundColor: "maroon"}}>

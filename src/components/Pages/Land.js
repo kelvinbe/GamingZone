@@ -8,6 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import "./Land.css";
+import { Skeleton } from "@mui/material";
 
 AOS.init();
 
@@ -57,7 +58,7 @@ export default function Land() {
           </h4>
         </Grid>
         <Grid item>
-          <Boot src={Console} />
+       <Boot src={Console} />
         </Grid>
       </Grid>
     </Box>
