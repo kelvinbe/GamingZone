@@ -29,10 +29,10 @@ export default function RatingsChart({chartIsVisible}) {
         const countNinte = ninTData.games_count;
     
         const gameData = [
-          { name: 'playstaion4', NoGames: countPS4 },
-          { name: 'xbox1', NoGames: countXbox },
-          { name: 'psp', NoGames: countPC },
-          { name: 'nintendo', NoGames: countNinte },
+          { name: 'Playstaion5', NoGames: countPS4 },
+          { name: 'Xbox', NoGames: countXbox },
+          { name: 'Psp', NoGames: countPC },
+          { name: 'Nintendo', NoGames: countNinte },
         ];
         return dispatch({type: 'GET_CHARTS_DATA',data: gameData})
       };

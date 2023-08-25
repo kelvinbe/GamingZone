@@ -20,10 +20,15 @@
 
 
   .tag {
-    margin-right: 2px;
-    transition: margin 0.2s ease-in-out;
+  position: relative !important;
+  margin: 1rem !important;
+  flex: 1 0 25rem !important;
+  max-width: 30rem !important; 
+  max-height: 50rem !important;
+  transition: 0.2s !important;
   }
 
   .tag:hover {
-    margin-top: -10px;
+  transform: translateY(-0.5rem) !important;
+  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb !important;
   }

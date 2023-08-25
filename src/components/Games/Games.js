@@ -47,16 +47,10 @@ const Games = () => {
 
 }
 
-
-
-
 useEffect(() => {
   let interval = null
-
-
   function increment() {
     setIndex(index + 1);;
-  
     if (index === stop) {
       setIndex(1)
     }
@@ -65,7 +59,7 @@ useEffect(() => {
 
 
   if(isHover){
-   interval = setInterval(increment, 5000);
+  interval = setInterval(increment, 5000);
   }else if(!isHover){
     setIndex(1)
     clearInterval(interval)
@@ -106,7 +100,7 @@ return (
       style={{
         display: "flex",
         justifyContent: "center",
-        backgroundColor: "#9c2a2a",
+        backgroundColor: "maroon",
         paddingTop: 80,
         paddingLeft: 20,
         paddingRight: 20,
@@ -128,7 +122,7 @@ return (
         {results?.map((game, key) => {
           return (
             <Grid item style={{ padding: 10 }} key={game.id} className="flex-wrapper">
-              <Card sx={{ maxWidth: 345 }} key={game.id} className="tag" onMouseOver={() => handleHover(game.id)} onMouseOut={handleHoverOut}>
+              <Card sx={{ maxWidth: 345, width: 354 }} key={game.id} className="tag" onMouseOver={() => handleHover(game.id)} onMouseOut={handleHoverOut}>
                 <CardHeader
                   avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
