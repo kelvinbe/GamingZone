@@ -4,7 +4,6 @@ import Console from "../../Assets/Console.svg";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Header from "../Header/Header";
-import BasicAlerts from "../Alert/Alert";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -30,7 +29,7 @@ export default function Land() {
   const [alert, setAlert] = useState(true);
 
   useEffect(() => {
-    console.log("hey");
+    console.log("hey", alert);
     setTimeout(() => {
       setAlert(false);
     }, 5000);
