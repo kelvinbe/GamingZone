@@ -54,6 +54,8 @@ export default function Land() {
       <Header />
       <Grid container className="container-land">
         <Grid item className="text-land">
+        {alert && <BasicAlerts/>}
+
           <h1 > Get fast Information on New and trending Games</h1>
           <h4 >
             Find the latest games, see the latest technology,

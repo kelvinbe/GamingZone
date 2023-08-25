@@ -16,12 +16,15 @@ export default function ChartSection() {
   const [chartIsVisible, setChartIsVisible] = useState()
   console.log('chartVisible', chartIsVisible)
   useEffect(() => { 
-const observer = new IntersectionObserver((entries) => {
+
+    const observer = new IntersectionObserver((entries) => {
       const entry= entries[0]
       setChartIsVisible(entry.isIntersecting)
-    }, [])
+
+  }, [])
   observer.observe(myRef.current)
-})
+
+  })
   
   return (
     <Box

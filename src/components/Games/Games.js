@@ -123,11 +123,12 @@ return (
         <Grid item md={12} style={{display: 'flex', justifyContent: 'center'}}>
           <OrderMenus />
           <PlatformsMenus />
+
         </Grid>
         {results?.map((game, key) => {
           return (
             <Grid item style={{ padding: 10 }} key={game.id} className="flex-wrapper">
-              <Card sx={{ maxWidth: 345, width: 345 }} key={game.id} className="tag" onMouseOver={() => handleHover(game.id)} onMouseOut={handleHoverOut}>
+              <Card sx={{ maxWidth: 345 }} key={game.id} className="tag" onMouseOver={() => handleHover(game.id)} onMouseOut={handleHoverOut}>
                 <CardHeader
                   avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
