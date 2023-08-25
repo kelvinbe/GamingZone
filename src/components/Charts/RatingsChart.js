@@ -16,7 +16,7 @@ export default function RatingsChart({chartIsVisible}) {
 
 
   
-  useEffect( () => {
+  useEffect(() => {
     const setGamesData = async () => {
         const ps4Data = await GetPs4PlatformGames();
         const xboxData = await GetXbox1PlatformGames();
@@ -36,9 +36,6 @@ export default function RatingsChart({chartIsVisible}) {
         ];
         return dispatch({type: 'GET_CHARTS_DATA',data: gameData})
       };
-
-      
-
       setGamesData()
   }, [dispatch]);
 

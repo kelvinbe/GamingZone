@@ -26,8 +26,6 @@ export default function Form() {
     // console.log('data', data.result)
     // const user = data?.result
     // console.log('data', )
-    
-
     dispatch({ type: "GET_USER_AUTH", data})
     navigate('/login')
     console.log("value", formValues);
