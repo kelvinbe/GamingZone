@@ -47,16 +47,10 @@ const Games = () => {
 
 }
 
-
-
-
 useEffect(() => {
   let interval = null
-
-
   function increment() {
     setIndex(index + 1);;
-  
     if (index === stop) {
       setIndex(1)
     }
@@ -65,7 +59,7 @@ useEffect(() => {
 
 
   if(isHover){
-   interval = setInterval(increment, 5000);
+  interval = setInterval(increment, 5000);
   }else if(!isHover){
     setIndex(1)
     clearInterval(interval)
@@ -106,7 +100,7 @@ return (
       style={{
         display: "flex",
         justifyContent: "center",
-        backgroundColor: "#9c2a2a",
+        backgroundColor: "maroon",
         paddingTop: 80,
         paddingLeft: 20,
         paddingRight: 20,

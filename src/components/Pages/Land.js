@@ -5,12 +5,12 @@ import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import Header from "../Header/Header";
 import BasicAlerts from "../Alert/Alert";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "./Land.css";
 
-AOS.init()
+AOS.init();
 
 const Boot = styled("img")(({ theme }) => ({
   padding: theme.spacing(1),
@@ -26,26 +26,21 @@ const Boot = styled("img")(({ theme }) => ({
   },
 }));
 
-
-
-
 export default function Land() {
-  const [alert, setAlert] = useState(true)
+  const [alert, setAlert] = useState(true);
 
   useEffect(() => {
-    console.log('hey')
+    console.log("hey");
     setTimeout(() => {
-      setAlert(false)
-    }, 5000)
-
-  })
-  
+      setAlert(false);
+    }, 5000);
+  });
 
   return (
     <Box
       sx={{
         flexGrow: 1,
-        backgroundColor: "#9c2a2a",
+        backgroundColor: "maroon",
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",
@@ -54,12 +49,12 @@ export default function Land() {
       <Header />
       <Grid container className="container-land">
         <Grid item className="text-land">
-          <h1 > Get fast Information on New and trending Games</h1>
-          <h4 >
-            Find the latest games, see the latest technology,
-            Enjoy a wide range of information on your favourite gaming platforms,
-            See the rating of new and up coming games. See what the gaming market has to offer
-            all this and more at Gamezone
+          <h1> Get fast Information on New and trending Games</h1>
+          <h4>
+            Find the latest games, see the latest technology, Enjoy a wide range
+            of information on your favourite gaming platforms, See the rating of
+            new and up coming games. See what the gaming market has to offer all
+            this and more at Gamezone
           </h4>
         </Grid>
         <Grid item>
