@@ -1,6 +1,6 @@
-import { Grid } from "@mui/material";
+import { Grid, CircularProgress } from "@mui/material";
 import React from "react";
-import Loader from "./Loader";
+// import Loader from "./Loader";
 
 const LoaderPage = () => {
   return (
@@ -15,7 +15,7 @@ const LoaderPage = () => {
       }}
     >
       <Grid item className="loader-fit">
-        <Loader />
+        <CircularProgress color="primary" />
       </Grid>
     </Grid>
   );
