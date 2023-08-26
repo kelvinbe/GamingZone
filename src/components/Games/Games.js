@@ -223,7 +223,7 @@ const style = {
   {selectedGame && (
             <div>
               <h2>{selectedGame.name}</h2>
-              <img width={'200px'} height={'200px'} src={selectedGame.background_image}/>
+              <img alt='photoo' width={'200px'} height={'200px'} src={selectedGame.background_image}/>
               <p>Release Date: {selectedGame.released}</p>
               <p>Genre: {selectedGame.genres[0].name}</p>
               <p>Rating: {selectedGame.rating}</p>
