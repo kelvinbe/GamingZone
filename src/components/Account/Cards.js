@@ -35,7 +35,7 @@ function OutlinedCard() {
     <Box sx={{ minWidth: 275 }}>
       {data.map((card) => {
         return (
-          <Card variant="outlined" key={card.number} style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', overflowX: 'visible'}}>
+          <Card variant="outlined" key={card.number} style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', overflowX: 'visible', border: "none", boxShadow: "none !important"}}>
             
             <div style={{display: 'flex', justifyContent: 'center'}}>
             <ImageAvatars/>
@@ -56,7 +56,7 @@ function SecondCard() {
       <Box sx={{ minWidth: 275, marginLeft: matches ? -4  : 0}}>
         {data2.map((card) => {
           return (
-            <Card variant="outlined" key={card.number}>
+            <Card variant="outlined" key={card.number} style={{ border: "none", boxShadow: "none !important" }}>
               <CardContent>
                 <ComposedCharts />
                 <Typography
@@ -85,7 +85,7 @@ function ThirdCard() {
     <Box sx={{ minWidth: 275 }}>
       {data3.map((card) => {
         return (
-          <Card variant="outlined" key={card.number}>
+          <Card variant="outlined" key={card.number} style={{border: "none", boxShadow: "none !important"}}>
             <CardContent>
                 <RadialChart />
 
@@ -115,7 +115,7 @@ function FourthCard() {
     <Box sx={{ minWidth: 275 }}>
       {data4.map((card) => {
         return (
-          <Card variant="outlined" key={card.number}>
+          <Card variant="outlined" key={card.number} style={{border: "none", boxShadow: "none !important"}}>
             <CardContent>
               <Typography
                 sx={{ fontSize: 14 }}
