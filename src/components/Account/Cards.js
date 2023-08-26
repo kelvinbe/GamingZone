@@ -9,18 +9,19 @@ import PieCharts from "./PieChart";
 import RadialChart from "./RadialChart";
 import ImageAvatars from "./Avatar";
 import ComposedCharts from "./ComposedChart";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 
 const data = [
-  { title: "Total Balance", number: 2005, games: "Global" },
+  { title: "Rate of Gameplay for user", number: 2005, games: "Global" },
 ];
 
 const data2 = [
-    { title: "Total Balance", number: 2002, games: "Global" },
+    { title: "Rate of online Gameplay for user", number: 2023, games: "Global Gamers Community" },
 ];
   const data3 = [
-    { title: "Total Balance", number: 2005, games: "Global" },
+    { title: "Rate of offline Gameplay for user", number: 2023, games: "Global Gamers Community" },
 ];
 const data4 = [
     { title: "Total Balance", number: 2005, games: "Global" },
@@ -30,15 +31,12 @@ const data4 = [
 console.log(data);
 
 function OutlinedCard() {
+  
   return (
     <Box sx={{ minWidth: 275 }}>
       {data.map((card) => {
         return (
           <Card variant="outlined" key={card.number} style={{display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', overflowX: 'visible'}}>
-            <CardContent>
-          <PieCharts />
-            
-            </CardContent>
             
             <div style={{display: 'flex', justifyContent: 'center'}}>
             <ImageAvatars/>
@@ -53,8 +51,10 @@ function OutlinedCard() {
 
 
 function SecondCard() {
+  const matches = useMediaQuery('(max-width:480px)');
+
     return (
-      <Box sx={{ minWidth: 275 }}>
+      <Box sx={{ minWidth: 275, marginLeft: matches ? -4  : 0}}>
         {data2.map((card) => {
           return (
             <Card variant="outlined" key={card.number}>
@@ -70,7 +70,7 @@ function SecondCard() {
                 <Typography variant="h5" component="div">
                   {card.number}
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                <Typography  color="text.secondary">
                   {card.games}
                 </Typography>
               </CardContent>
@@ -103,15 +103,7 @@ function ThirdCard() {
               <Typography sx={{ mb: 1.5 }} color="text.secondary">
                 {card.games}
               </Typography>
-              <Typography variant="body2">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-              </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         );
       })}

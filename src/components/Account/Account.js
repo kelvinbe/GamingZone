@@ -7,6 +7,9 @@ import Grid from "@mui/material/Grid";
 import { OutlinedCard, SecondCard, ThirdCard} from "./Cards";
 import Header from "../Header/Header";
 import FooterContainer from "../Footer/footer";
+import MoneyMade from "./MoneyMade";
+import { Typography } from "@mui/material";
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -27,6 +30,14 @@ export default function Account() {
   
             <OutlinedCard />
           </Item>
+        </Grid>
+        <Grid item xs={12}>
+          <div style={{display: 'flex', justifyContent:'center', marginBottom: 20}}>
+          <Typography variant="h5">Gaming Revenue Globally</Typography>
+          </div>
+          <Item>
+        <MoneyMade />
+        </Item>
         </Grid>
         <Grid item xs={12} sm={4} md={6}>
           <Item>
