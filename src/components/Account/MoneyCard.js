@@ -2,10 +2,13 @@ import React from "react";
 import Paper from "@mui/material/Paper";
 import { Typography } from "@mui/material";
 
+
+
+
 const MoneyCard = ({amount, name}) => {
   return (
     <div>
-      <Paper
+    <Paper
         elevation={6}
         style={{
           width: "200px",
@@ -13,14 +16,16 @@ const MoneyCard = ({amount, name}) => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          flexDirection:'column'
+          margin: 20
         }}
-      >
+    >
+        <div style={{flexDirection: 'column'}}>
         <div>
-           <Typography variant="h5"> {name}</Typography>
+        <Typography variant="h5"> {name}</Typography>
         </div>
         <div>
         <Typography variant="h5">{amount} $</Typography>
+        </div>
         </div>
       </Paper>
     </div>
