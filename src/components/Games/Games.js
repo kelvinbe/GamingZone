@@ -20,12 +20,20 @@ import PlatformsMenus from "../Menu/PlatformsMenu";
 import { GetAllGames } from "./GamesApi";
 import FooterContainer from "../Footer/footer";
 import CircularProgress from "@mui/material/CircularProgress";
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+
 
 const Games = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isHover, setIsHover] = useState(false);
   const [isGameId, setGameId] = useState(null);
   const [index, setIndex] = useState(1);
+  const [selectedGame, setSelectedGame] = useState(null);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
 
   const dispatch = useDispatch();
   const results = useSelector((state) => state.results);
@@ -38,6 +46,12 @@ const Games = () => {
 
   const handleHoverOut = () => {
     setIsHover(false);
+  };
+
+
+  const handleCardClick = (game) => {
+    setSelectedGame(game);
+    handleOpen();
   };
 
   useEffect(() => {
@@ -84,6 +98,19 @@ const Games = () => {
   }, [dispatch]);
 
 
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+
   return (
     <div style={{ height: "100vh", backgroundColor: "maroon"}}>
       <div
@@ -128,6 +155,7 @@ const Games = () => {
                       className="tag"
                       onMouseOver={() => handleHover(game.id)}
                       onMouseOut={handleHoverOut}
+                      onClick={() => handleCardClick(game)}
                     >
                       <CardHeader
                         avatar={
@@ -185,6 +213,24 @@ const Games = () => {
             </>
           )}
         </Grid>
+        <Modal
+  open={open}
+  onClose={handleClose}
+  aria-labelledby="modal-modal-title"
+  aria-describedby="modal-modal-description"
+>
+  <Box sx={style}>
+  {selectedGame && (
+            <div>
+              <h2>{selectedGame.name}</h2>
+              <img width={'200px'} height={'200px'} src={selectedGame.background_image}/>
+              <p>Release Date: {selectedGame.released}</p>
+              <p>Genre: {selectedGame.genres[0].name}</p>
+              <p>Rating: {selectedGame.rating}</p>
+            </div>
+          )}
+  </Box>
+</Modal>
       </div>
       {!isLoading && <FooterContainer />}
     </div>
