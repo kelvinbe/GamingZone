@@ -109,6 +109,7 @@ const style = {
   boxShadow: 24,
   borderRadius: 10,
   p: 4,
+  borderColor: 'white'
 };
 
 
