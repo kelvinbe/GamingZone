@@ -18,12 +18,13 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+
 export default function Account() {
   return (
     <React.Fragment>
     <Header />
     <Box sx={{ flexGrow: 1 }} style={{marginTop: 80}}>
-      <div style={{display: 'flex', justifyContent: 'center'}}><h1>My Account</h1></div>
+      <div style={{display: 'flex', justifyContent: 'center', fontFamily: 'Nunito, sans-serif', fontSize: '30px', fontWeight: 'bold'}}><h1>My Account</h1></div>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Item>
@@ -32,8 +33,8 @@ export default function Account() {
           </Item>
         </Grid>
         <Grid item xs={12}>
-          <div style={{display: 'flex', justifyContent:'center', marginBottom: 20}}>
-          <Typography variant="h5">Gaming Revenue Globally</Typography>
+          <div style={{display: 'flex', justifyContent:'center', marginBottom: 20, fontFamily: 'Nunito, sans-serif', fontSize: '30px', fontWeight: 'bold'}}>
+          <Typography style={{fontFamily: 'Nunito, sans-serif', fontSize: '30px', fontWeight: 'bold'}} variant="h5">Gaming Revenue Globally</Typography>
           </div>
           <Item>
         <MoneyMade />
