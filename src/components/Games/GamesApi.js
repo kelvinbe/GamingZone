@@ -1,7 +1,7 @@
 import axios from "axios"
 
 
-const getAllGamesURL= 'https://api.rawg.io/api/games?key=973bd0fd235343c58eebaf81de68b6cd'
+const getAllGamesURL= 'https://api.rawg.io/api/games?key=7f22b5bfa00d484abc15cd6ac362c1c9'
 
 // const getAllPlatForm = 'https://api.rawg.io/api/platforms?key=973bd0fd235343c58eebaf81de68b6cd'/
 
